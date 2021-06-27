@@ -1,0 +1,141 @@
+[{
+  "_id": {
+    "$oid": "60d00855b788e62ad4d351e1"
+  },
+  "username": "aaa",
+  "password": "1234",
+  "access": "manager"
+},{
+  "_id": {
+    "$oid": "60d1d1302f56371b9c92e17e"
+  },
+  "username": "bbb",
+  "password": "123",
+  "access": "noruser"
+},{
+  "_id": {
+    "$oid": "60d84776165d4620981878ed"
+  },
+  "username": "ccc",
+  "password": "111",
+  "access": "noruser"
+},{
+  "_id": {
+    "$oid": "60d84788165d4620981878f0"
+  },
+  "username": "ddd",
+  "password": "1",
+  "access": "noruser"
+},{
+  "_id": {
+    "$oid": "60d8479b165d4620981878f3"
+  },
+  "username": "eee",
+  "password": "1",
+  "access": "manager"
+},{
+  "_id": {
+    "$oid": "60d847a3165d4620981878f6"
+  },
+  "username": "fff",
+  "password": "1",
+  "access": "noruser"
+},{
+  "_id": {
+    "$oid": "60d847a8165d4620981878f9"
+  },
+  "username": "ggg",
+  "password": "1",
+  "access": "noruser"
+},{
+  "_id": {
+    "$oid": "60d847ae165d4620981878fc"
+  },
+  "username": "hhh",
+  "password": "1",
+  "access": "manager"
+},{
+  "_id": {
+    "$oid": "60d847ba165d4620981878ff"
+  },
+  "username": "iii",
+  "password": "1",
+  "access": "noruser"
+},{
+  "_id": {
+    "$oid": "60d847c0165d462098187902"
+  },
+  "username": "jjj",
+  "password": "1",
+  "access": "noruser"
+},{
+  "_id": {
+    "$oid": "60d847c6165d462098187905"
+  },
+  "username": "kkk",
+  "password": "1",
+  "access": "noruser"
+},{
+  "_id": {
+    "$oid": "60d847ca165d462098187908"
+  },
+  "username": "lll",
+  "password": "1",
+  "access": "noruser"
+},{
+  "_id": {
+    "$oid": "60d847cf165d46209818790b"
+  },
+  "username": "mmm",
+  "password": "1",
+  "access": "noruser"
+},{
+  "_id": {
+    "$oid": "60d847d5165d46209818790e"
+  },
+  "username": "nnn",
+  "password": "1",
+  "access": "noruser"
+},{
+  "_id": {
+    "$oid": "60d847e3165d462098187911"
+  },
+  "username": "ooo",
+  "password": "11",
+  "access": "manager"
+},{
+  "_id": {
+    "$oid": "60d847e7165d462098187914"
+  },
+  "username": "ppp",
+  "password": "1",
+  "access": "manager"
+},{
+  "_id": {
+    "$oid": "60d847ec165d462098187917"
+  },
+  "username": "qqq",
+  "password": "1",
+  "access": "noruser"
+},{
+  "_id": {
+    "$oid": "60d847f1165d46209818791a"
+  },
+  "username": "rrr",
+  "password": "1",
+  "access": "noruser"
+},{
+  "_id": {
+    "$oid": "60d847f6165d46209818791d"
+  },
+  "username": "sss",
+  "password": "1",
+  "access": "manager"
+},{
+  "_id": {
+    "$oid": "60d847fc165d462098187920"
+  },
+  "username": "ttt",
+  "password": "1234",
+  "access": "noruser"
+}]
