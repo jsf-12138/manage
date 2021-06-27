@@ -1,0 +1,92 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+</head>
+<body>
+    <form action="/prolist" method="get">
+    <div class="container">
+		<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">商品管理系统</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div>			
+				<input type="submit" name="a1" class="btn btn-outline-success my-2 my-sm-0" value="注销">
+			</div>
+        </nav>
+
+		<div class="row" style="margin-top: 10px">
+        <!-- 左边栏 -->
+        <div class="col-md-2">
+            <div class="list-group" id="tabs_nav">
+                <input type="submit" name="a1" class="list-group-item list-group-item-action" value="首页">
+                <input type="submit" name="a1" class="list-group-item list-group-item-action" value="商品列表">
+                <input type="submit" name="a1" class="list-group-item list-group-item-action" value="增加商品">
+                <input type="submit" name="a1" class="list-group-item list-group-item-action" value="进货记录">
+                <input type="submit" name="a1" class="list-group-item list-group-item-action" value="用户列表"> 
+                
+            </div>
+        </div>			
+		<!-- 主内容区 -->
+			<div class="col-md">
+			<div class="card">
+					<div class="card-header">商品信息表</div>
+                    <div class="form-inline my-2 my-lg-0" >
+                        <input name="a2" class="form-control mr-sm-2" type="search"
+                            placeholder="请输入关键字" aria-label="Search" name="key" style="margin-top: 10px;margin-bottom: 10px;">
+                        <input type="submit" name="a1" style="margin-top: 10px;margin-bottom: 10px" value="查询"> 
+                    </div>
+					<div class="card-body" style="padding:0px">
+						<table class="table table-white">
+							<thead>
+								<tr>
+									<th scope="col" style="font-size:8px" width="100px">商品名称</th>
+									<th scope="col" style="font-size:8px" width="75px">商品类别</th>
+									<th scope="col" style="font-size:8px" width="75px">称重单位</th>
+									<th scope="col" style="font-size:8px" width="75px">采买价格</th>
+									<th scope="col" style="font-size:8px" width="75px">销售价格</th>
+									<th scope="col" style="font-size:8px" width="85px">供应商</th>
+									<th scope="col" style="font-size:8px" width="65px">库存数</th>
+									<th scope="col" style="font-size:8px" width="100px">生产日期</th>
+                                    <th scope="col" style="font-size:8px" width="60px">保质期</th>
+									<th scope="col" width="16%" style="font-size:8px">操作</th>
+								</tr>
+                            </thead> 
+                            <% for(i in product){%>
+                                <tr>
+                                    <th scope="row" style="font-size:13px"><%=product[i].pname%></th>
+                                    <td style="font-size:11px"><%=product[i].pcategory%></td>
+                                    <td style="font-size:11px"><%=product[i].pmeasure%></td>
+                                    <td style="font-size:11px"><%=product[i].pbprice%></td>
+                                    <td style="font-size:11px"><%=product[i].psprice%></td>
+                                    <td style="font-size:11px"><%=product[i].pfirm%></td>
+                                    <td style="font-size:11px"><%=product[i].preserve%></td>
+                                    <td style="font-size:11px"><%=product[i].pdate%></td>
+                                    <td style="font-size:11px"><%=product[i].pexp%></td>
+                                    <td>
+                                    <a href="/prodelete?id=<%=product[i]._id%>" class="btn btn-outline-success my-2 my-sm-0">删除</a>
+                                    <a href="/addorder?id=<%=product[i]._id%>" class="btn btn-outline-success my-2 my-sm-0">进货</a>                                                                          
+                                    <a href="/prodit?id=<%=product[i]._id%>" class="btn btn-outline-success my-2 my-sm-0">修改信息</a>                                 
+                                    </td>
+                                </tr>
+                                <%}%>                         
+                        </table>
+					</div>
+				</div>
+			</div>					
+		</div>
+		</div>
+</form>
+</body>
+</html>

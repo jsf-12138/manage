@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       input[type="text"]{
+        border: 1px solid #708090; /*设置输入框边框，边缘线的颜色、大小、及实线虚线*/
+        height: 36px;
+        border-radius: 10px;
+        width: 200px;
+        padding-left: 5px; /*让光标距离左边5个像素*/
+    }
+    input[type="submit"]{
+        border: 1px solid #708090; /*设置输入框边框，边缘线的颜色、大小、及实线虚线*/
+        height: 36px;
+        border-radius: 10px;
+        width: 200px;
+        padding-left: 5px; /*让光标距离左边5个像素*/
+    }
+        </style>
+</head>
+<body>
+    <div style="margin-top:200px;;text-align:center">
+        <%=message%>
+        <form action="/input" method="get">
+        <p style="font-family: SimHei; font-size: 120%;">
+          用户名：<input type="text" name="username" value=""><br></p>
+          <p style="font-family: SimHei; font-size: 120%;">
+          密码：<input type="text" name="password" value=""></p><br>
+          <p style="font-family: SimHei; font-size: 120%;">
+            <label><input type="radio" name="access" value="manager" >管理员</label>
+           <label><input type="radio" name="access" value="noruser">普通用户</label></p><br>
+          <input type="submit" name="submit1" value="登录">
+          <input type="submit" name="submit1" value="注册">
+        </form>
+        </div>
+     
+      
+</body>
+</html>

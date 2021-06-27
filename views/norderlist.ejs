@@ -1,0 +1,76 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title> 
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" >
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" ></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" ></script>
+</head>
+<body>
+    <form action="/norderlist" method="get">
+    <div class="container">
+		<nav class="navbar navbar-expand-lg  navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">商品管理系统</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        
+            <div>			
+				<input type="submit" name="a1" class="btn btn-outline-success my-2 my-sm-0" value="注销">
+			</div>
+        </nav>
+
+		<div class="row" style="margin-top: 10px">
+        <!-- 左边栏 -->
+        <div class="col-md-2">
+            <div class="list-group" id="tabs_nav">
+                <input type="submit" name="a1" class="list-group-item list-group-item-action" value="首页">
+                <input type="submit" name="a1" class="list-group-item list-group-item-action" value="商品列表">
+                <input type="submit" name="a1" class="list-group-item list-group-item-action" value="进货记录">                 
+            </div>
+        </div>			
+		<!-- 主内容区 -->
+		<div class="col-md">
+			<div class="card">
+					<div class="card-header">进货记录表</div>
+					<div class="card-body" style="padding:0px">
+						<table class="table table-white">
+							<thead>
+								<tr>
+									<th scope="col" width="90px">商品名称</th>	
+                                    <th scope="col" width="90px">商品类别</th>
+                                    <th scope="col" width="75px">称重单位</th>
+                                    <th scope="col" width="90px">采买价格</th>
+                                    <th scope="col" width="75px">供应商</th>
+                                    <th scope="col" width="60px">进货量</th>
+									<th scope="col" width="100px">进货日期</th>
+								</tr>
+							</thead>  
+							<% for(i in order) {%>
+								<tr>
+									<th scope="row" style="font-size:15px"><%=order[i].pname%></th>
+								    <td style="font-size:13px"><%=order[i].product.pcategory%></td>
+                                    <td style="font-size:13px"><%=order[i].product.pmeasure%></td>
+                                    <td style="font-size:13px"><%=order[i].product.pbprice%></td>
+                                    <td style="font-size:13px"><%=order[i].pfirm%></td>
+                                    <td style="font-size:13px"><%=order[i].onumber%></td>
+									<td style="font-size:13px"><%=order[i].odate%></td>
+									<td>
+									</td>
+								</tr>
+								<%}%>                   
+                        </table>
+					</div>
+				</div>
+			</div>					
+		</div>
+		</div>
+    </form>     
+</body>
+</html>
